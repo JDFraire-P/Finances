@@ -16,51 +16,51 @@
                     <img src="../ico/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-middle">
                     Referidos por siempre
                 </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-3 ms-lg-auto mb-0 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Iniciar sesion
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
-                            <form class="px-3 py-4">
-                                <div class="mb-3">
-                                    <label for="DropdownFormEmail1" class="form-label">Correo electronico</label>
-                                    <input type="email" class="form-control" id="DropdownFormEmail1" placeholder="Correo@Ejemplo.com">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="DropdownFormPassword" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="DropdownFormPassword" placeholder="*******">
-                                </div>
-                                <div class="mb-3">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                                        <label class="form-check-label" for="dropdownCheck">
-                                            Recuerdame
-                                        </label>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-3 ms-lg-auto mb-0 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Iniciar sesion
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg-end dropdown-menu-dark">
+                                <form class="px-3 py-4">
+                                    <div class="mb-3">
+                                        <label for="DropdownFormEmail1" class="form-label">Correo electronico</label>
+                                        <input type="email" class="form-control" id="DropdownFormEmail1" placeholder="Correo@Ejemplo.com">
                                     </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-                            </form>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">¿No tienes una cuenta? Registrate</a>
-                            <a class="dropdown-item" href="#">¿No recuerdas tu contraseña?</a>
-                        </div>
-                    </li>
-                </ul>
-              </div>
+                                    <div class="mb-3">
+                                        <label for="DropdownFormPassword" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control" id="DropdownFormPassword" placeholder="*******">
+                                    </div>
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                            <label class="form-check-label" for="dropdownCheck">
+                                                Recuerdame
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+                                </form>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">¿No tienes una cuenta? Registrate</a>
+                                <a class="dropdown-item" href="#">¿No recuerdas tu contraseña?</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
-    <main class="bg-dark text-white">
-        <section class="mx-auto" style="width: 400px;">
-            <form>
+        <main class="bg-dark text-white">
+            <section class="mx-auto" style="width: 400px;">
+                <form>
                 <div class="pb-1">
                     <label for="InputName" class="form-label" style="margin-bottom: .15rem;">Nombre y Apellidos</label>
                     <input type="email" class="form-control" id="InputName" aria-describedby="emailHelp">
@@ -99,6 +99,6 @@
             </form>
         </section>
     </main>
-    <footer class="bg-dark text-white"></footer>
 </body>
+<footer class="bg-dark text-white"></footer>
 </html>
