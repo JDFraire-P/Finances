@@ -29,7 +29,7 @@ RUN a2enmod rewrite
 # Use the PORT environment variable in Apache configuration files.
 # https://cloud.google.com/run/docs/reference/container-contract#port
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
-RUN sed 's/AllowOverride None/AllowOverride All/g' /etc/apache2/sites-available/000-default.conf
+RUN sed 's/DocumentRoot \/var\/www\/html/ DocumentRoot \/var\/www\/html\n\<Directory \“\/var\/www\/html\”\>\nAllowOverride All\n\<\/Directory\>\n/g' /etc/apache2/sites-available/000-default.conf
 
 # Configure PHP for development.
 # Switch to the production php.ini for production operations.
