@@ -1,4 +1,0 @@
-Options +FollowSymLinks
-RewriteEngine on
-
-RewriteRule ^Sign-up/([A-Za-z0-9])$ /var/www/html/index.php?nickName=$1
