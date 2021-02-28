@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "finances-jdfraire",
+  "private_key_id": "4525587921b930331bf7433e4a4dad09f34e729e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDca2pkTwVNdXeX\nxlAeIyzix80616smCnPj0fOA7FkG+5SohK/aRTH8YjjnP5ZqsNhrBbkcF/e0ntkp\nfLDFxWQ81Dkq9ggYuWBItjHI8fKvM6SY2H5/5Z2pmvk5+u2cHwwFN6273cYyZQF6\nMCIyZGhgDlboRhQNvWlZHcuWUW+gEmbcE6mtoNXYXvQj4CMU049cTwGzfsK5cl7/\nWohB1CWY6Zkf1PEg+tyfQux1bw2NH4/KkT6tGokEUNeHGNeaoOsePHx5vTGqIxnP\n8MggeIhnS7I4aAe+dNrdx3NBlqeUzeckZe3WtV+YuamyNLOQk/eLiW4sU4vWBO4j\nCxa4zKvZAgMBAAECggEAB3KvvST4amYiPOQsF+CbZyxWMHtSIq5uvQ9+mWgjF/vP\nSaR2Jrt41WziPFonNIK2RWODnkHnEljdwKugc4ZYfT+0kNGQc3lsGfjiFMasKyRl\nFu8V0y+IlM8SRdXHSqO37cM0YSk8xb4o/x56QVaoOjqx0BZyHga89RBvLSyiR3fX\nqFfLaKKMeT7LHGrmlXvCJFugxQLuRA9WdT4tnbTbHc45dXmUsWD57xk1qgB9/mBV\nHZxwv6CRXg97B5nOO+DhGlxHxfHIHcb2YqNl80yji9oxDpQSefG4CiRkXUaLgSUv\nzBgAGwCjPYKizXzvdJK8dFiO0dFk4dAdehoy3y7fKwKBgQDyhlE3jVUkhJnjXXaE\nbXAPZ6jtHSPdMzoh2tzzX4QRxX7oWGAqp15n9WWaYnhy1vo2W7+0oUz7GOp5bELm\nTL5pwEjO37YzuOnR1nPuFHQOyO6tr5LPeZBwyKHtz+dMwp6sfWATqH+MDwHTSCO4\nC41XBWI40C25U7QDGF23o2FlKwKBgQDoqqyu/6SiujhHfPJCw45Q1aLi+mKcHkgh\nyx1cBXV+vR/AA/gUVmQQUAaAlE21829V2xKycOr5wtdbnCe/+pSmVPLLsJ8ATiiO\n06c1o3IGicI8zSN50DpAIp8/xlDgNBO4+QIDrmJrpxhi+L/HYdxfFX9zgp5QYBkq\nIpYjcmR5CwKBgQCTsokzs7bujnLJrNnIvH1KZG7UOLLmu5Pjmk6FSN49lHE9PtUS\nJOuxlBlUdDO2fIXVJPsTHkirgvkJCY2Ug5hS/u9YTZXA2hRL3rarf3lOp7/ztsFJ\n6Va12PoEwmCytrO7iH9CeZNz0I/kBEL8isyA+p5eyymNfBRc7jHk7HMcEQKBgBOr\n4n/FQ4Eyp3F74eu9Jvo0pdn0+4NhmA2rY6cVGxMFIHsWmtH1X+51JaeXYl6g32ft\n5s3JeER3scegE0hLAmhxxDlujHL1KL6yrG9/izN8UDzdx0MUVOh5ROead9oM7SH1\ng7MV+mJJtWkgyO4tmvk7ExSMFaCMD3Sdif4jPNVzAoGBAJZ0GLDKBjqsje1Ac8j9\nQwwapYuXVvYX+7FQWckOWBhtRquIV6r9AKsdR4INNaSYOmyDS8gxZP4UwQ79AhcB\nfAkGhwaEYrXRU7L9XSUzr7S4Qm0yI48CWNb1tMLgJi0TlvnPsI1IM9csmat/sja3\nT+OYrh4oJrVgF3OuWKbxeh4K\n-----END PRIVATE KEY-----\n",
+  "client_email": "finances-service-account@finances-jdfraire.iam.gserviceaccount.com",
+  "client_id": "114587376703926604142",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/finances-service-account%40finances-jdfraire.iam.gserviceaccount.com"
+}

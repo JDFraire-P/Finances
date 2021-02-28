@@ -1,22 +1,11 @@
 <?php
-$username = 'root';
-$password = 'jdfraire97';
-$dbName = 'Finances';
-$connectionName = getenv("finances-jdfraire:us-central1:root");
-$socketDir = getenv('/cloudsql/finances-jdfraire:us-central1:root') ?: '/cloudsql';
-
-// Connect using UNIX sockets
-$dsn = sprintf(
-    'mysql:dbname=%s;unix_socket=%s/%s',
-    $dbName,
-    $socketDir,
-    $connectionName
-);
-
-// Connect to the database.
-$conn = new PDO($dsn, $username, $password, $conn_config);
+// Use a Data source name (DSN) to connect to Cloud SQL through the proxy
+$dsn = sprintf('mysql:unix_socket=/cloudsql/finances-jdfraire:us-central1:root;dbname=Finances');
+// Instantiate your DB using the DSN, username, and password
+$dbUser = 'root';
+$dbPass = 'jdfraire97';
+$db = new PDO($dsn, $dbUser, $dbPass);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
