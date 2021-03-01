@@ -36,6 +36,8 @@ RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Dire
 # https://github.com/docker-library/docs/blob/master/php/README.md#configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
+RUN apt-get install wget
+
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 RUN chmod +x cloud_sql_proxy
 
