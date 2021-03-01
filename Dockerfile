@@ -43,4 +43,4 @@ RUN apt-get install wget -y
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 RUN chmod +x cloud_sql_proxy
 
-RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json"
+RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json" &
