@@ -1,12 +1,19 @@
 <?php
-// Use a Data source name (DSN) to connect to Cloud SQL through the proxy
-$dsn = sprintf('mysql:unix_socket=/cloudsql/finances-jdfraire:us-central1:root;dbname=Finances');
-// Instantiate your DB using the DSN, username, and password
-$dbUser = 'root';
-$dbPass = 'jdfraire97';
-$db = new PDO($dsn, $dbUser, $dbPass);
+    // // Use a Data source name (DSN) to connect to Cloud SQL through the proxy
+    // $dsn = sprintf('mysql:unix_socket=/cloudsql/finances-jdfraire:us-central1:root;dbname=Finances');
+    // // Instantiate your DB using the DSN, username, and password
+    // $dbUser = 'root';
+    // $dbPass = 'jdfraire97';
+    // $db = new PDO($dsn, $dbUser, $dbPass);
 ?>
-
+<?php
+    // Use a Data source name (DSN) to connect to Cloud SQL through the proxy
+    $dsn = 'mysql:host=34.72.28.71;port=3306;dbname=Finances';
+    // Instantiate your DB using the DSN, username, and password
+    $dbUser = 'root';
+    $dbPass = 'jdfraire97';
+    $db = new PDO($dsn, $dbUser, $dbPass);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
