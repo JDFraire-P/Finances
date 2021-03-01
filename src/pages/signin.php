@@ -9,7 +9,7 @@
 
 <?php
     // Use a Data source name (DSN) to connect to Cloud SQL through the proxy
-    $dsn = 'mysql:host=34.121.67.237;port=3306;dbname=Finances';
+    $dsn = 'mysql:host=127.0.0.1;port=3306;dbname=Finances';
     // Instantiate your DB using the DSN, username, and password
     $dbUser = 'root';
     $dbPass = 'jdfraire97';

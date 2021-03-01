@@ -43,6 +43,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # Active pdo_mysql extencion
 RUN sed '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
+RUN apt-get install php8.0.2-mysql
 
 # Download & start cloud sql proxy
 RUN apt-get install wget -y
