@@ -43,13 +43,9 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # Active pdo_mysql extencion
 RUN sed -i '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
-RUN apt-get install php-mysql
 
 # Download & start cloud sql proxy
 RUN apt-get install wget -y
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 RUN chmod +x cloud_sql_proxy
 RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json" &
-
-# Restart Apache
-RUN service apache2 restart
