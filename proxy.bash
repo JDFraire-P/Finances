@@ -1,2 +1,0 @@
-./app/proxy/cloud_sql_proxy.exe -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="./app/json/finances-jdfraire.json"
-./src/proxy/cloud_sql_proxy.exe -dir="./cloudsql" -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="./src/json/finances-jdfraire.json"
