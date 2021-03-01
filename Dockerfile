@@ -36,10 +36,6 @@ RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Dire
 # https://github.com/docker-library/docs/blob/master/php/README.md#configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
-RUN sed '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
-RUN sed '/pdo_sqlite/s/^;//g' "$PHP_INI_DIR/php.ini"
-
-
 RUN apt-get update
 
 RUN apt-get install wget -y
