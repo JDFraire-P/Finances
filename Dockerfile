@@ -43,7 +43,7 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # Active pdo_mysql extencion
 RUN sed -i '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
-RUN /etc/init.d/apache2 restart
+RUN apache2 restart
 
 # Download & start cloud sql proxy
 RUN apt-get install wget -y
