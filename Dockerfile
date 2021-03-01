@@ -34,12 +34,17 @@ RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Dire
 # Switch to the production php.ini for production operations.
 # RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 # https://github.com/docker-library/docs/blob/master/php/README.md#configuration
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
-COPY php.ini "$PHP_INI_DIR/"
+RUN sed -i '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
+RUN sed -i '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
 
-# Install wget & cloud sql proxy
+
 RUN apt-get update
+
 RUN apt-get install wget -y
+
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 RUN chmod +x cloud_sql_proxy
-RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json" &
+
+RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json"
