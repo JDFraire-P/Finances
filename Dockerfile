@@ -35,3 +35,6 @@ RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Dire
 # RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 # https://github.com/docker-library/docs/blob/master/php/README.md#configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+
+
+RUN ./proxy/cloud_sql_proxy.exe -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json"
