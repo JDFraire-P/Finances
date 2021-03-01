@@ -42,8 +42,8 @@ RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/a
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
 # Active pdo_mysql extencion
-RUN sed -i '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
-RUN apache2 restart
+RUN docker-php-ext-configure pdo_mysql --with-pdo-mysql=mysqlnd
+RUN docker-php-ext-install pdo_mysql
 
 # Download & start cloud sql proxy
 RUN apt-get install wget -y
