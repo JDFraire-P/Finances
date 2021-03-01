@@ -21,6 +21,10 @@ switch ($request) {
         require __DIR__ . '/pages/signup.php';
     break;
 
+    case '/phpinfo' :
+        require __DIR__ . '/pages/phpinfo.php';
+    break;
+
     default:
         http_response_code(404);
         require __DIR__ . '/pages/404.php';

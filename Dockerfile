@@ -24,11 +24,16 @@ RUN set -ex; \
 WORKDIR /var/www/html
 COPY src/ ./
 
+# Update apt
+RUN apt-get update
+
+# Active rewrite rules
 RUN a2enmod rewrite
+RUN sed -i 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Directory \“\/var\/www\/html\”\>\n  AllowOverride All\n  \<\/Directory\>\n/g' /etc/apache2/sites-available/000-default.conf
+
 # Use the PORT environment variable in Apache configuration files.
 # https://cloud.google.com/run/docs/reference/container-contract#port
 RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
-RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Directory \“\/var\/www\/html\”\>\n  AllowOverride All\n  \<\/Directory\>\n/g' /etc/apache2/sites-available/000-default.conf
 
 # Configure PHP for development.
 # Switch to the production php.ini for production operations.
@@ -36,13 +41,14 @@ RUN sed 's/DocumentRoot \/var\/www\/html/DocumentRoot \/var\/www\/html\n  \<Dire
 # https://github.com/docker-library/docs/blob/master/php/README.md#configuration
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
+# Active pdo_mysql extencion
 RUN sed '/pdo_mysql/s/^;//g' "$PHP_INI_DIR/php.ini"
 
-RUN apt-get update
-
+# Download & start cloud sql proxy
 RUN apt-get install wget -y
-
 RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy
 RUN chmod +x cloud_sql_proxy
-
 RUN ./cloud_sql_proxy -instances=finances-jdfraire:us-central1:root=tcp:3306 -credential_file="json/finances-jdfraire.json" &
+
+# Restart Apache
+RUN service apache2 restart
